@@ -1,0 +1,21 @@
+h1{
+  text-decoration:
+  color: black;
+  font-size: 60px;
+  text-align: center;
+  font: sans-serif;
+  font-family: monospace;
+}
+
+.image1{
+  margin-left: 110px;
+  -webkit-filter: grayscale(70%);
+    filter: grayscale(40%);
+}
+
+.image2{
+  position: relative;
+  right: 330px;
+  -webkit-filter: grayscale(70%);
+    filter: grayscale(10%);
+}

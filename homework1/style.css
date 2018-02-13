@@ -1,0 +1,23 @@
+h1{
+  text-decoration:
+  color: black;
+  font-size: 80px;
+  text-align: center;
+  font: sans-serif;
+  font-family: monospace;
+}
+.my-content {
+  width: 80%;
+  margin-left: 10%;
+  background-color: red;
+
+}
+.my-text{
+  color: red;
+  float: left;
+}
+.my-image{
+  display: inline;
+  width: 200%;
+  height: 100%;
+}
