@@ -3,21 +3,26 @@
   <head>
     <title> April 26 </title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style26.css">
+    <link id=stylesheet rel="stylesheet" type="text/css" href="style26.css">
+    <link id=stylesheet2 rel="stylesheet2" type="text/css" href="print.css" media="print">
+    <script src="jquery.js"></script>
   </head>
-  <body onload='init()'>
-    <h1 id="title">My Website</h1>
-  </body>
-  <br>
-      <div class="container">
-        <img id="image26" class="image1" src="image26.png" style="width: 100%;">
-        <div style="width:500px; margin:auto; position:relative;">
+  <body id = "lolbody">
+    <h1 id="title">Star of the East</h1>
+
+      <!-- -->
+      <div class="imagecontainer">
+        <img id="image26" class="image1" src="people.jpg" style="width: 100%;">
         <span style="display:inline-block; width: YOURWIDTH;"></span>
-      <br>
-      <audio id="music">
-        <source src="OumKalthoum.mp3" type="audio/mpeg">
+      </div>
+      <audio loop id="music">
+        <source src="clap.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
-    </audio>
+      </audio>
+      <div class="videocontainer">
+        <iframe id=video width="560" height="315" src="https://www.youtube.com/embed/8HNHKXCuKCQ?rel=0&amp;showinfo=0&amp;start=406" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <!-- add ?autoplay=1 at end of src to make video autoplay-->
   </div>
+  </body>
 
   <script src=script26.js></script>

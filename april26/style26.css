@@ -3,6 +3,32 @@ h1{
   color: black;
   font-size: 60px;
   text-align: center;
-  font: sans-serif;
-  font-family: monospace;
+  font-family: cursive;
 }
+
+h1:hover{
+  cursor: default;
+}
+
+iframe{
+  width: 700px;
+  height: 450px;
+  display: none;
+  position: absolute;
+  top: 350px;
+  bottom: 250px;
+  left: 200px;
+  right: 200px;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+
+/* Wanted to add this to iframe to center it
+  display: block;
+    width: 800px;
+    height: 400px;
+    margin: 1 auto;
+    border: 0;*/

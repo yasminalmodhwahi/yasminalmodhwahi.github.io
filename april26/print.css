@@ -1,0 +1,15 @@
+h1{
+  display: hidden;
+}
+
+iframe{
+  display: hidden;
+}
+
+.videocontainer{
+  display: none;
+}
+
+.image1{
+orientation: landscape;
+}
