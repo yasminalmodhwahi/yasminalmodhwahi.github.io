@@ -1,9 +1,9 @@
 h1{
-  display: hidden;
+  display: none;
 }
 
 iframe{
-  display: hidden;
+  display: none;
 }
 
 .videocontainer{
@@ -11,5 +11,5 @@ iframe{
 }
 
 .image1{
-orientation: landscape;
+  orientation: landscape;
 }

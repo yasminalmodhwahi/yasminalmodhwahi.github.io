@@ -43,6 +43,8 @@ button.onmouseout = function(){
 button.onclick = function ()
 {
   video.style.display = "inline"; "autoplay";
+  video.src += "&autoplay=1";
+
 }
 
 
