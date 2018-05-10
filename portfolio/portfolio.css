@@ -1,0 +1,229 @@
+/*this is the code from https://www.w3schools.com/howto/howto_js_slideshow.asp on how to make automatic slideshow*/
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  /* margin: 0 auto; */
+  z-index: -10;
+}
+
+/*
+#container>img{
+  width:100%;
+  height: 100%;
+  position: absolute;
+}
+
+#container>button{
+  position: absolute;
+
+}*/
+
+
+ /* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+ /* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+ /* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/*
+Caption text
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}*/
+
+/* / The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+/* all of this is to slide images right and left, not automatic slideshow */
+
+
+
+/* body, #slider, .wrap, .slide-content{
+  margin:0;
+  padding:0;
+  font-family: Arial;
+  width:100%;
+  height:100vh;
+  overflow-x: hidden;
+}
+
+.wrap{position:relative}
+
+.slide{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1{background-image: url('img1.jpg');}
+.slide2{background-image: url('img2.jpg');}
+
+.slide-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content span {
+  font-size: 5rem;
+  color:#fff;
+}
+
+.arrow{
+  cursor: pointer;
+  position: absolute;
+  top: 50%
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrowleft{
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  left:0;
+  margin-left:500px;
+  margin-top: 40%;
+}
+
+#arrowright{
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right:0;
+  margin-right:500px;
+  margin-top: 40%;
+} */
+
+
+/*all of this is for dropdown menu*/
+
+.dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    left: 1%;
+    opacity: 0.5;
+}
+
+.menu{
+  width: 20px;
+  height: 20px;
+}
+
+
+.dropdown {
+    position: inherit;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    top: 3%;
+    left: 2%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
