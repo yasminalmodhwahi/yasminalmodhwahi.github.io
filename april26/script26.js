@@ -32,7 +32,7 @@ function pauseclip (){
   audio.pause();
 }
 
-//event listenerto pauseclip on mouseout and it knows its on the image bc button is declared as image26 in top
+//event listener to pauseclip on mouseout and it knows its on the image bc button is declared as image26 in top
 button.onmouseout = function(){
   pauseclip();
   console.log("hover out");

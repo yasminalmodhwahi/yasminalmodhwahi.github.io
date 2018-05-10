@@ -7,28 +7,33 @@ var arrowRight = document.getElementById("arrowright");
 var slideIndex = 0;
 /*this is for the slideshow automatic from https://www.w3schools.com/howto/howto_js_slideshow.asp*/
 
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        //console.log(slides);
-        var dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-           slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-          slideIndex = 1
-        }
-        slides[slideIndex-1].style.display = "block";
-
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 4000); // Change image every 2 seconds
+function showSlides(index) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    //console.log(slides);
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      if (i == index) {
+        slides[i].style.display = "block";
+        dots[i].classList.add("active");
+      }
+      else {
+        slides[i].style.display = "none";
+        dots[i].classList.remove("active");
+      }
     }
-    showSlides();
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+
+}
+
+setInterval(function(){
+  showSlides(slideIndex);
+}, 5500); // Change image every 4.5 seconds
+
+showSlides(slideIndex);
 
 /*song autoplay*/
 var song;
@@ -43,34 +48,10 @@ function setup (){
   song.loop();
 }
 
-/*load slower transition*/
-var i = 0,               //initial index
-    duration = 3000,     //animation duration
-    interval = 3000;     //interval
-
-function switchImg() {
-    $("<img>")                                               //create new <img>
-        .attr("src", "img" + (i<6?++i:(i=1,i)) + ".jpg") //set attr.
-        .css("opacity", 0)                                   //hide it
-        .prependTo("#wrap")                                  //add it to DOM
-        .animate({                                           //fade in
-            opacity: 1
-        }, {
-            duration: duration
-        })
-        .next()                                              //select current img
-        .animate({                                           //fade out
-            opacity: 0
-        }, {
-            duration: duration
-        })
-        .promise()
-        .done(function () {                                  //remove old img
-            $(this).remove();                                // when done
-            setTimeout(switchImg, interval);                 //repeat
-        });
+function currentSlide(index){
+  slideIndex = index-1;
+  showSlides(slideIndex);
 }
-switchImg();
 
 
 

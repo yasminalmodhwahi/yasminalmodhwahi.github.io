@@ -11,14 +11,12 @@ h1:hover{
 }
 
 iframe{
-  width: 700px;
-  height: 450px;
+  width: 60%;
+  height: 40%;
   display: none;
-  position: absolute;
   top: 350px;
   bottom: 250px;
-  left: 200px;
-  right: 200px;
+  left: 50%;
 }
 
 img:hover{
